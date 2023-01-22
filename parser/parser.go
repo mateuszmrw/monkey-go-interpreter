@@ -85,7 +85,6 @@ func New(l *lexer.Lexer) *Parser {
 
 	return p
 }
-
 func (p *Parser) parseHashLiteral() ast.Expression {
 	hash := &ast.HashLiteral{Token: p.curToken}
 	hash.Paris = make(map[ast.Expression]ast.Expression)
@@ -234,7 +233,7 @@ func (p *Parser) parsePrefixExpression() ast.Expression {
 
 func (p *Parser) parseCallExpression(function ast.Expression) ast.Expression {
 	exp := &ast.CallExpression{Token: p.curToken, Function: function}
-	exp.Arguemnts = p.parseExpressionList(token.RPAREN)
+	exp.Arguments = p.parseExpressionList(token.RPAREN)
 	return exp
 }
 

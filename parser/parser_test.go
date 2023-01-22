@@ -609,13 +609,13 @@ func TestCallExpressionParsing(t *testing.T) {
 		return
 	}
 
-	if len(exp.Arguemnts) != 3 {
-		t.Fatalf("wrong leght of arguments, got=%d", len(exp.Arguemnts))
+	if len(exp.Arguments) != 3 {
+		t.Fatalf("wrong leght of arguments, got=%d", len(exp.Arguments))
 	}
 
-	testLiteralExpression(t, exp.Arguemnts[0], 1)
-	testInfixExpressions(t, exp.Arguemnts[1], 2, "*", 3)
-	testInfixExpressions(t, exp.Arguemnts[2], 4, "+", 5)
+	testLiteralExpression(t, exp.Arguments[0], 1)
+	testInfixExpressions(t, exp.Arguments[1], 2, "*", 3)
+	testInfixExpressions(t, exp.Arguments[2], 4, "+", 5)
 
 }
 
